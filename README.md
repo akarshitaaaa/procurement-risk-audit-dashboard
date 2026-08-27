@@ -5,16 +5,16 @@ A 3-page Power BI dashboard that detects classic internal-audit red flags in rea
 ## Dashboard Preview
 
 ### Page 1 — Executive Overview
-(<img width="1303" height="737" alt="page 1" src="https://github.com/user-attachments/assets/b687b667-3d97-4e04-87d2-a4c6cb5a14f2" />
-)
+<img width="1303" height="737" alt="page 1" src="https://github.com/user-attachments/assets/b687b667-3d97-4e04-87d2-a4c6cb5a14f2" />
+
 
 ### Page 2 — Risk Deep-Dive
-(<img width="1310" height="737" alt="page 2" src="https://github.com/user-attachments/assets/5410ad49-7d70-46c3-9d5d-7149247a28e0" />
-)
+<img width="1310" height="737" alt="page 2" src="https://github.com/user-attachments/assets/5410ad49-7d70-46c3-9d5d-7149247a28e0" />
+
 
 ### Page 3 — Quality & Delivery Risk
-(<img width="1312" height="736" alt="page 3" src="https://github.com/user-attachments/assets/2f623a10-5ff9-45ca-a52b-df618c6c47b5" />
-)
+<img width="1312" height="736" alt="page 3" src="https://github.com/user-attachments/assets/2f623a10-5ff9-45ca-a52b-df618c6c47b5" />
+
 
 ## Objective
 Simulate an internal audit of an enterprise procurement process to identify control weaknesses, quantify financial risk exposure, and produce audit-style findings and recommendations — the same core workflow performed by a risk/audit analyst.
