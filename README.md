@@ -1,6 +1,8 @@
 # Procurement Risk & Internal Audit Dashboard
 
-A 3-page Power BI dashboard that detects classic internal-audit red flags in real procurement data, paired with a small agentic AI layer that automatically writes its own year-over-year executive summary.
+A 3-page Power BI dashboard that detects classic internal-audit red flags in real procurement data, paired with a small agentic AI layer that automatically writes its own year-over-year executive summary, and a RAG chatbot that answers questions about the findings.
+
+**Live chatbot demo:** https://procurement-risk-chatbot.streamlit.app
 
 ## Dashboard Preview
 
@@ -69,7 +71,7 @@ This is real (not synthetic) procurement data sourced from Kaggle. As with most 
 - Price variance thresholds (30% above category average) are illustrative and not derived from a formal cost-benchmarking study
 
 ## Tools Used
-Python (pandas), SQL (SQLite), Power BI, DAX, Groq API (LLM), ReportLab (PDF generation)
+Python (pandas), SQL (SQLite), Power BI, DAX, Groq API (LLM), ChromaDB (vector store), Streamlit, ReportLab (PDF generation)
 
 ## AI Executive Summary Agent (Agentic AI Layer)
 
@@ -94,40 +96,72 @@ Three specialized steps, chained together, each with a single clear responsibili
 This narrative is displayed directly on Page 1 of the dashboard (Executive Overview), above the KPI cards.
 
 ### Files
-- `summary_agent/metrics_agent.py` — deterministic year-over-year metrics calculation
-- `summary_agent/narrative_agent.py` — the LLM call that generates the narrative
-- `summary_agent/output_agent.py` — builds the PDF briefing and the Power BI card CSV
+- `metrics_agent.py` — deterministic year-over-year metrics calculation
+- `narrative_agent.py` — the LLM call that generates the narrative
+- `output_agent.py` — builds the PDF briefing and the Power BI card CSV
 - `Annual_Risk_Briefing.pdf` — generated one-page executive briefing
 - `powerbi_summary_card.csv` — the narrative, formatted for import into Power BI
 
+## RAG Chatbot (Conversational Layer)
 
+**Live demo:** https://procurement-risk-chatbot.streamlit.app
+
+The dashboard answers the questions it was designed to answer. The chatbot answers the ones it wasn't — a reviewer can ask "which supplier has the worst defect rate?" or "what are split PO clusters?" in plain English and get an answer grounded in the actual query outputs, without opening Power BI.
+
+### Pipeline
+
+| Stage | What happens |
+|---|---|
+| **Ingestion** | The six risk-query CSVs are read with pandas and converted row by row into natural-language text chunks (399 detail chunks) |
+| **Summary chunks** | Seven aggregate chunks are computed at load time — best/worst defect rate, fastest/slowest delivery, counts per risk category — so the retriever can answer "which vendor is worst overall" rather than only returning individual transaction rows |
+| **Embedding** | All 406 chunks are encoded with the `all-MiniLM-L6-v2` sentence-transformer model |
+| **Vector store** | Embeddings are indexed in an in-memory ChromaDB collection, rebuilt on each application start |
+| **Retrieval** | The incoming question is embedded and the five nearest chunks are returned by cosine similarity |
+| **Generation** | The retrieved chunks are passed to `openai/gpt-oss-120b` via the Groq API, under a system prompt restricting the model to the supplied context |
+
+### Hallucination guardrail
+
+The system prompt instructs the model to answer using only the retrieved context and to state plainly when the context is insufficient, rather than guessing.
+
+This is verifiable rather than aspirational. Asked *"which vendor is performing best overall?"*, the chatbot reports that Alpha_Inc has the lowest defect rate and Gamma_Co the fastest average delivery, then states that the provided context contains no combined ranking and therefore cannot identify a single overall top performer. A weaker implementation would have invented a winner.
+
+The deployed app also exposes a **Retrieved context** expander beneath every answer, showing exactly which chunks the model was given — so any answer can be traced back to source data in one click.
+
+### Deployment note
+
+The app is hosted on Streamlit Community Cloud, which allocates roughly 1 GB of memory per app. The original implementation depended on `sentence-transformers`, which pulls in PyTorch and exceeds that limit on its own. It was replaced with ChromaDB's built-in ONNX embedding function — the same `all-MiniLM-L6-v2` model, running on ONNX Runtime instead of PyTorch. Retrieval quality is unchanged and the memory footprint drops by well over a gigabyte.
+
+Two versions are included: `chatbot.py` (Gradio, for local use) and `streamlit_app.py` (Streamlit, deployed).
+
+### Files
+- `chatbot/chatbot.py` — Gradio version, runs locally
+- `chatbot/streamlit_app.py` — Streamlit version, deployed to Streamlit Community Cloud
+- `chatbot/requirements.txt` — dependencies for the deployed app
+- `chatbot/*.csv` — the query outputs the chatbot reads as its knowledge base
+
+The Groq API key is read from an environment variable (locally) or a Streamlit secret (deployed) and is never committed to this repository.
 
 ## Files in This Repository
 ```
 procurement-risk-audit-dashboard/
 ├── README.md
-├── Procurement KPI Analysis Dataset.csv       # source data (Kaggle)
-├── risk_queries.sql                           # all 10 SQL queries
-├── procurement_risk_analysis_dashboard.pbix   # Power BI dashboard (3 pages)
-├── Annual_Risk_Briefing.pdf                   # AI-generated executive briefing
-├── screenshots/
-│   ├── page1_executive_overview.png
-│   ├── page2_risk_deep_dive.png
-│   └── page3_quality_delivery_risk.png
-├── query_outputs/
-│   ├── 1_vendor_concentration.csv
-│   ├── 2_price_variance.csv
-│   ├── 3_maverick_noncompliant.csv
-│   ├── 4_duplicate_pos.csv
-│   ├── 5_split_po_pattern.csv
-│   ├── 6_monthly_spend_trend.csv
-│   ├── 7_risk_breakdown.csv
-│   ├── 8_defect_rate_by_supplier.csv
-│   ├── 9_order_status_breakdown.csv
-│   ├── 10_delivery_delay_by_supplier.csv
-│   └── powerbi_summary_card.csv
-└── summary_agent/
-    ├── metrics_agent.py
-    ├── narrative_agent.py
-    └── output_agent.py
+├── Procurement_KPI_Analysis_Dataset.csv        # source data (Kaggle)
+├── Procurement_risk_analysis_dashboard.pbix    # Power BI dashboard (3 pages)
+├── metrics_agent.py                            # deterministic YoY metrics
+├── narrative_agent.py                          # LLM narrative generation
+├── output_agent.py                             # PDF + Power BI card output
+└── chatbot/
+    ├── chatbot.py                              # RAG chatbot (Gradio, local)
+    ├── streamlit_app.py                        # RAG chatbot (Streamlit, deployed)
+    ├── requirements.txt
+    ├── 1_vendor_concentration.csv
+    ├── 2_price_variance.csv
+    ├── 3_maverick_noncompliant.csv
+    ├── 4_duplicate_pos.csv
+    ├── 5_split_po_pattern.csv
+    ├── 6_monthly_spend_trend.csv
+    ├── 7_risk_breakdown.csv
+    ├── 8_defect_rate_by_supplier.csv
+    ├── 9_order_status_breakdown.csv
+    └── 10_delivery_delay_by_supplier.csv
 ```
