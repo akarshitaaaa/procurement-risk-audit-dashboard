@@ -1,0 +1,138 @@
+PO_ID,Supplier,Item_Category,Quantity,Negotiated_Price,po_value,Order_Status
+PO-00412,Gamma_Co,Packaging,1969,87.28,171854.32,Pending
+PO-00588,Gamma_Co,MRO,1860,92.17,171436.2,Delivered
+PO-00714,Gamma_Co,MRO,1995,82.65,164886.75,Delivered
+PO-00403,Beta_Supplies,Electronics,1754,86.54,151791.16,Cancelled
+PO-00080,Gamma_Co,MRO,1501,100.99,151585.99,Delivered
+PO-00654,Gamma_Co,Office Supplies,1835,82.36,151130.6,Delivered
+PO-00100,Beta_Supplies,MRO,1629,86.44,140810.76,Pending
+PO-00355,Gamma_Co,Packaging,1645,80.78,132883.1,Delivered
+PO-00755,Beta_Supplies,Office Supplies,1768,74.97,132546.96,Pending
+PO-00510,Delta_Logistics,Electronics,1755,73.67,129290.85,Delivered
+PO-00648,Delta_Logistics,Office Supplies,1685,75.21,126728.84999999999,Delivered
+PO-00054,Delta_Logistics,Office Supplies,1640,76.41,125312.4,Cancelled
+PO-00053,Alpha_Inc,MRO,1949,63.26,123293.73999999999,Pending
+PO-00109,Beta_Supplies,Packaging,1535,78.28,120159.8,Delivered
+PO-00744,Delta_Logistics,Office Supplies,1621,73.78,119597.38,Delivered
+PO-00732,Delta_Logistics,Packaging,1350,82.34,111159.0,Partially Delivered
+PO-00542,Delta_Logistics,Packaging,1771,61.48,108881.07999999999,Delivered
+PO-00096,Epsilon_Group,MRO,1550,69.57,107833.49999999999,Partially Delivered
+PO-00327,Delta_Logistics,Office Supplies,1004,92.9,93271.6,Delivered
+PO-00088,Delta_Logistics,MRO,1461,63.39,92612.79,Partially Delivered
+PO-00452,Beta_Supplies,Raw Materials,1122,81.7,91667.40000000001,Delivered
+PO-00141,Beta_Supplies,MRO,1212,74.55,90354.59999999999,Delivered
+PO-00086,Delta_Logistics,Office Supplies,1635,54.37,88894.95,Delivered
+PO-00337,Delta_Logistics,Office Supplies,978,87.7,85770.6,Pending
+PO-00007,Gamma_Co,MRO,1774,47.82,84832.68000000001,Delivered
+PO-00539,Delta_Logistics,Electronics,903,92.45,83482.35,Delivered
+PO-00330,Beta_Supplies,Packaging,1584,51.92,82241.28,Delivered
+PO-00576,Beta_Supplies,Electronics,985,80.88,79666.79999999999,Delivered
+PO-00715,Beta_Supplies,MRO,1019,77.93,79410.67000000001,Delivered
+PO-00087,Delta_Logistics,Raw Materials,1945,40.12,78033.4,Delivered
+PO-00533,Delta_Logistics,MRO,1216,63.0,76608.0,Delivered
+PO-00266,Delta_Logistics,MRO,1570,47.87,75155.9,Delivered
+PO-00005,Delta_Logistics,Raw Materials,1180,60.53,71425.4,Delivered
+PO-00672,Delta_Logistics,Electronics,841,83.77,70450.56999999999,Delivered
+PO-00112,Gamma_Co,Raw Materials,1066,65.88,70228.08,Delivered
+PO-00761,Gamma_Co,Packaging,1871,37.41,69994.11,Delivered
+PO-00152,Delta_Logistics,Raw Materials,1067,64.16,68458.72,Delivered
+PO-00745,Alpha_Inc,Packaging,1027,65.42,67186.34,Delivered
+PO-00017,Delta_Logistics,MRO,1173,55.49,65089.770000000004,Delivered
+PO-00617,Delta_Logistics,MRO,1262,51.46,64942.520000000004,Delivered
+PO-00455,Beta_Supplies,MRO,1245,51.65,64304.25,Delivered
+PO-00478,Beta_Supplies,MRO,1030,61.58,63427.4,Pending
+PO-00721,Delta_Logistics,Packaging,1976,31.56,62362.56,Partially Delivered
+PO-00501,Delta_Logistics,Office Supplies,1459,42.56,62095.04,Delivered
+PO-00456,Delta_Logistics,Electronics,1293,47.55,61482.149999999994,Delivered
+PO-00754,Beta_Supplies,Electronics,1442,41.82,60304.44,Delivered
+PO-00523,Gamma_Co,Packaging,734,78.92,57927.28,Pending
+PO-00187,Delta_Logistics,MRO,1088,53.04,57707.52,Partially Delivered
+PO-00570,Delta_Logistics,Electronics,1041,52.54,54694.14,Cancelled
+PO-00171,Delta_Logistics,Packaging,1620,33.45,54189.00000000001,Delivered
+PO-00137,Alpha_Inc,Raw Materials,1202,44.13,53044.26,Delivered
+PO-00677,Delta_Logistics,Raw Materials,945,55.14,52107.3,Delivered
+PO-00193,Delta_Logistics,Electronics,1648,31.46,51846.08,Delivered
+PO-00258,Delta_Logistics,MRO,1447,35.07,50746.29,Cancelled
+PO-00127,Delta_Logistics,Packaging,542,93.11,50465.62,Delivered
+PO-00079,Alpha_Inc,MRO,1528,33.0,50424.0,Delivered
+PO-00213,Alpha_Inc,Packaging,1772,27.76,49190.72,Delivered
+PO-00212,Gamma_Co,Packaging,1912,25.59,48928.08,Delivered
+PO-00222,Beta_Supplies,Office Supplies,695,69.76,48483.200000000004,Delivered
+PO-00252,Delta_Logistics,Office Supplies,1298,37.21,48298.58,Partially Delivered
+PO-00731,Alpha_Inc,Office Supplies,778,62.08,48298.24,Delivered
+PO-00273,Delta_Logistics,Office Supplies,1460,31.87,46530.200000000004,Delivered
+PO-00267,Delta_Logistics,MRO,491,93.35,45834.85,Delivered
+PO-00081,Delta_Logistics,Packaging,558,81.4,45421.200000000004,Delivered
+PO-00585,Beta_Supplies,Office Supplies,706,62.06,43814.36,Delivered
+PO-00042,Beta_Supplies,Office Supplies,560,77.87,43607.200000000004,Delivered
+PO-00628,Delta_Logistics,Packaging,1046,40.1,41944.6,Partially Delivered
+PO-00756,Beta_Supplies,Electronics,1598,26.03,41595.94,Partially Delivered
+PO-00543,Epsilon_Group,Electronics,624,66.3,41371.2,Delivered
+PO-00468,Delta_Logistics,Raw Materials,546,74.77,40824.42,Delivered
+PO-00218,Beta_Supplies,Raw Materials,731,54.78,40044.18,Pending
+PO-00295,Delta_Logistics,Office Supplies,1745,22.57,39384.65,Delivered
+PO-00420,Alpha_Inc,Raw Materials,509,74.72,38032.479999999996,Delivered
+PO-00508,Delta_Logistics,Raw Materials,1112,33.6,37363.200000000004,Delivered
+PO-00246,Beta_Supplies,Packaging,759,46.47,35270.729999999996,Pending
+PO-00339,Delta_Logistics,Raw Materials,600,57.92,34752.0,Pending
+PO-00368,Delta_Logistics,Electronics,1172,29.28,34316.16,Delivered
+PO-00326,Delta_Logistics,MRO,813,41.78,33967.14,Delivered
+PO-00114,Gamma_Co,Raw Materials,345,98.09,33841.05,Partially Delivered
+PO-00710,Alpha_Inc,MRO,898,35.54,31914.92,Delivered
+PO-00226,Delta_Logistics,Office Supplies,1629,19.41,31618.89,Cancelled
+PO-00354,Delta_Logistics,Office Supplies,1066,28.47,30349.02,Cancelled
+PO-00379,Beta_Supplies,Raw Materials,677,43.11,29185.47,Delivered
+PO-00307,Gamma_Co,MRO,329,85.35,28080.149999999998,Delivered
+PO-00367,Beta_Supplies,MRO,1306,20.17,26342.02,Delivered
+PO-00024,Beta_Supplies,Office Supplies,393,66.31,26059.83,Partially Delivered
+PO-00655,Delta_Logistics,Electronics,571,45.58,26026.18,Pending
+PO-00190,Beta_Supplies,Packaging,941,27.21,25604.61,Delivered
+PO-00154,Gamma_Co,Raw Materials,1101,22.73,25025.73,Delivered
+PO-00416,Delta_Logistics,Office Supplies,450,55.03,24763.5,Delivered
+PO-00066,Gamma_Co,Office Supplies,437,56.45,24668.65,Partially Delivered
+PO-00423,Delta_Logistics,Electronics,519,47.52,24662.88,Delivered
+PO-00279,Alpha_Inc,Packaging,748,32.71,24467.08,Cancelled
+PO-00687,Beta_Supplies,Packaging,1006,23.66,23801.96,Delivered
+PO-00685,Delta_Logistics,Office Supplies,429,55.35,23745.15,Cancelled
+PO-00751,Delta_Logistics,Electronics,1809,12.68,22938.12,Delivered
+PO-00557,Gamma_Co,Raw Materials,493,41.44,20429.92,Delivered
+PO-00475,Delta_Logistics,Raw Materials,1189,17.15,20391.35,Delivered
+PO-00537,Delta_Logistics,Packaging,1873,9.89,18523.97,Partially Delivered
+PO-00097,Delta_Logistics,Packaging,752,24.37,18326.24,Delivered
+PO-00532,Delta_Logistics,Office Supplies,520,34.78,18085.600000000002,Partially Delivered
+PO-00527,Beta_Supplies,Packaging,561,30.99,17385.39,Delivered
+PO-00336,Delta_Logistics,Electronics,538,32.25,17350.5,Pending
+PO-00301,Delta_Logistics,Office Supplies,252,67.64,17045.28,Delivered
+PO-00500,Beta_Supplies,Electronics,539,30.57,16477.23,Partially Delivered
+PO-00579,Delta_Logistics,MRO,318,51.78,16466.04,Delivered
+PO-00587,Gamma_Co,Office Supplies,880,18.69,16447.2,Pending
+PO-00392,Delta_Logistics,Office Supplies,202,78.26,15808.52,Delivered
+PO-00147,Beta_Supplies,Raw Materials,338,46.28,15642.640000000001,Delivered
+PO-00641,Delta_Logistics,Packaging,1277,11.63,14851.51,Delivered
+PO-00167,Delta_Logistics,Electronics,148,98.62,14595.76,Delivered
+PO-00138,Beta_Supplies,Office Supplies,697,19.83,13821.509999999998,Delivered
+PO-00639,Gamma_Co,Packaging,1061,12.36,13113.96,Delivered
+PO-00429,Beta_Supplies,Raw Materials,279,46.5,12973.5,Delivered
+PO-00078,Delta_Logistics,Raw Materials,1005,12.79,12853.949999999999,Delivered
+PO-00552,Beta_Supplies,MRO,731,17.3,12646.300000000001,Delivered
+PO-00569,Beta_Supplies,Electronics,926,13.49,12491.74,Delivered
+PO-00283,Beta_Supplies,Office Supplies,269,45.75,12306.75,Delivered
+PO-00747,Beta_Supplies,Packaging,145,81.86,11869.7,Delivered
+PO-00491,Delta_Logistics,Packaging,735,15.89,11679.15,Delivered
+PO-00630,Beta_Supplies,Electronics,746,15.35,11451.1,Delivered
+PO-00106,Delta_Logistics,MRO,865,13.14,11366.1,Cancelled
+PO-00362,Beta_Supplies,Raw Materials,502,20.65,10366.3,Cancelled
+PO-00208,Beta_Supplies,Office Supplies,590,15.56,9180.4,Delivered
+PO-00546,Epsilon_Group,Raw Materials,199,45.64,9082.36,Delivered
+PO-00084,Delta_Logistics,Raw Materials,255,33.59,8565.45,Delivered
+PO-00550,Beta_Supplies,Packaging,354,23.87,8449.98,Delivered
+PO-00448,Delta_Logistics,Packaging,708,11.61,8219.88,Partially Delivered
+PO-00573,Delta_Logistics,MRO,96,80.32,7710.719999999999,Delivered
+PO-00020,Delta_Logistics,Raw Materials,180,38.89,7000.2,Delivered
+PO-00517,Beta_Supplies,Office Supplies,574,11.47,6583.780000000001,Cancelled
+PO-00653,Gamma_Co,Raw Materials,72,89.49,6443.28,Partially Delivered
+PO-00462,Delta_Logistics,MRO,148,40.1,5934.8,Delivered
+PO-00031,Gamma_Co,Electronics,326,15.92,5189.92,Delivered
+PO-00625,Delta_Logistics,Electronics,203,20.0,4060.0,Delivered
+PO-00386,Beta_Supplies,Packaging,303,11.42,3460.2599999999998,Delivered
+PO-00470,Delta_Logistics,Raw Materials,230,12.81,2946.3,Partially Delivered
